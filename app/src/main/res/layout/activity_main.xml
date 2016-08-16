@@ -7,39 +7,30 @@
     >
 
 
+    <!--<Button-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Back"-->
+        <!--android:id="@+id/back"-->
+        <!--android:clickable="false"-->
+        <!--android:onClick="buttonOnClick" />-->
+    <!--<Button-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Next"-->
+        <!--android:id="@+id/next"-->
+        <!--android:clickable="false"-->
+        <!--android:onClick="buttonOnClick" />-->
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Back"
-        android:id="@+id/back"
-        android:clickable="false"
-        android:onClick="buttonOnClick" />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Next"
-        android:id="@+id/next"
+        android:id="@+id/face"
         android:clickable="false"
         android:onClick="buttonOnClick" />
 
-    <TextView
-        android:textColor="@color/blue"
-        android:textSize="20pt"
-        android:textAlignment="center"
-        android:background="@color/colorPrimary"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/idTextView"
-        android:text="@string/dans_game"
-        />
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/idImageViewPic"
-        android:src="@drawable/dansgame"
-        android:scaleType="centerInside"
-        />
 
 
 

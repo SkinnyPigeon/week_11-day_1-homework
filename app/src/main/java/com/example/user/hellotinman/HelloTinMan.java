@@ -16,9 +16,10 @@ import android.widget.TextView;
 
 public class HelloTinMan extends AppCompatActivity {
 
-    private ImageView findImageViewPic;
-    private TextView findTextView;
-    private Button nextButton, backButton;
+//    private ImageView findImageViewPic;
+//    private TextView findTextView;
+//    private Button nextButton, backButton;
+    private Button mFaceButton;
 
     private int currentImage = 0;
     private int currentText = 0;
@@ -29,13 +30,19 @@ public class HelloTinMan extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        findImageViewPic = (ImageView)findViewById(R.id.idImageViewPic);
-        findTextView = (TextView)findViewById(R.id.idTextView);
-        backButton = (Button) findViewById(R.id.back);
-        nextButton = (Button) findViewById(R.id.next);
+//        backButton = (Button) findViewById(R.id.back);
+//        nextButton = (Button) findViewById(R.id.next);
+        mFaceButton = (Button)findViewById(R.id.face);
 
-        backButton.setOnClickListener(backButtonChangeImageListener);
-        nextButton.setOnClickListener(nextButtonChangeImageListener);
+//        backButton.setOnClickListener(backButtonChangeImageListener);
+//        nextButton.setOnClickListener(nextButtonChangeImageListener);
+        mFaceButton.setOnClickListener( new View.OnClickListener() {
+
+            @Override
+            public void onClick( View view ) {
+                
+            }
+        });
     }
     View.OnClickListener nextButtonChangeImageListener = new View.OnClickListener() {
 
@@ -46,8 +53,8 @@ public class HelloTinMan extends AppCompatActivity {
             currentText++;
             currentText = currentText % texts.length;
 
-            findImageViewPic.setImageResource(images[currentImage]);
-            findTextView.setText(texts[currentText]);
+//            findImageViewPic.setImageResource(images[currentImage]);
+//            findTextView.setText(texts[currentText]);
 
         }
     };
@@ -61,8 +68,8 @@ public class HelloTinMan extends AppCompatActivity {
             currentText = ( currentText + texts.length) % texts.length;
 
 
-            findImageViewPic.setImageResource(images[currentImage]);
-            findTextView.setText(texts[currentText]);
+//            findImageViewPic.setImageResource(images[currentImage]);
+//            findTextView.setText(texts[currentText]);
 
         }
     };

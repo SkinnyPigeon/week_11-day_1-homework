@@ -17,6 +17,13 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".FaceActivity"
+            android:label="Here Comes A Face"
+            android:parentActivityName=".HelloTinMan">
+
+        </activity>
+
     </application>
 
 </manifest>
