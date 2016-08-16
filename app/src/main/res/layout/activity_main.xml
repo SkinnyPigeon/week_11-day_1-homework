@@ -6,29 +6,17 @@
     android:gravity="center"
     >
 
-
-    <!--<Button-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="Back"-->
-        <!--android:id="@+id/back"-->
-        <!--android:clickable="false"-->
-        <!--android:onClick="buttonOnClick" />-->
-    <!--<Button-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="Next"-->
-        <!--android:id="@+id/next"-->
-        <!--android:clickable="false"-->
-        <!--android:onClick="buttonOnClick" />-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_text"
+        android:id="@+id/main_text"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Back"
-        android:id="@+id/face"
-        android:clickable="false"
-        android:onClick="buttonOnClick" />
+        android:text="Face Me"
+        android:id="@+id/face" />
 
 
 

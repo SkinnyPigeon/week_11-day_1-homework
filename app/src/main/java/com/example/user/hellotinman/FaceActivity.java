@@ -26,7 +26,7 @@ public class FaceActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         Bundle extras = intent.getExtras();
-        String words = extras.getString("words");
+        int words = extras.getInt("words");
         int faces = extras.getInt( "faces" );
 
         mTextView.setText( words );

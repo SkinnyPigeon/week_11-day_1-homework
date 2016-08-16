@@ -1,5 +1,6 @@
 package com.example.user.hellotinman;
 
+import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +10,8 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import java.util.Random;
 
 /**
  * Created by user on 15/08/2016.
@@ -30,49 +33,27 @@ public class HelloTinMan extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        backButton = (Button) findViewById(R.id.back);
-//        nextButton = (Button) findViewById(R.id.next);
         mFaceButton = (Button)findViewById(R.id.face);
 
-//        backButton.setOnClickListener(backButtonChangeImageListener);
-//        nextButton.setOnClickListener(nextButtonChangeImageListener);
         mFaceButton.setOnClickListener( new View.OnClickListener() {
 
             @Override
             public void onClick( View view ) {
-                
+
+                Random rand = new Random();
+                int index = rand.nextInt( images.length );
+
+                final int words = texts[ index ];
+                final int faces = images[ index ];
+
+                Intent intent = new Intent( HelloTinMan.this, FaceActivity.class );
+                intent.putExtra( "words", words );
+                intent.putExtra( "faces", faces);
+                Log.d("Eightball: ", "passing through '" + words + "'");
+                startActivity( intent );
             }
         });
     }
-    View.OnClickListener nextButtonChangeImageListener = new View.OnClickListener() {
-
-        public void onClick(View v) {
-
-            currentImage++;
-            currentImage = currentImage % images.length;
-            currentText++;
-            currentText = currentText % texts.length;
-
-//            findImageViewPic.setImageResource(images[currentImage]);
-//            findTextView.setText(texts[currentText]);
-
-        }
-    };
-
-    View.OnClickListener backButtonChangeImageListener = new View.OnClickListener() {
-
-        public void onClick(View v) {
-            currentImage--;
-            currentImage = (currentImage + images.length) % images.length;
-            currentText--;
-            currentText = ( currentText + texts.length) % texts.length;
-
-
-//            findImageViewPic.setImageResource(images[currentImage]);
-//            findTextView.setText(texts[currentText]);
-
-        }
-    };
 }
 
 //}
